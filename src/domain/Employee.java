@@ -1,6 +1,14 @@
 package domain;
+/**
+ * Базовий клас, який описує співробітників компанії
+ * @author Віка Думініке
+ */
 public class Employee {
 
+    /**
+     * Метод для форматування інформації про свіпробітника
+     * @return рядок з детальною інформацією
+     */
     @Override
     public String toString() {
         return "\nEmployee ID= " + ID + "\nName= " + name + "\nJobTitle= " + jobTitle + "\nLevel= " + level + "\nDept= " + dept;
@@ -13,7 +21,13 @@ public class Employee {
     private String dept;
 
    // private static int employeesCount = 0;
-
+    /**
+     * Конструктор класу Employee
+     * @param name Прізвище та ім'я
+     * @param jobTitle Посада
+     * @param level Розряд чи категорія
+     * @param dept Відділ, де працює співробітник
+     */
     public Employee(String name, String jobTitle, int level, String dept) {
         this();
         setName(name);
@@ -29,7 +43,10 @@ public class Employee {
         }
         this.dept = dept;
     }
-
+    /**
+     * Конструктор за замовчуванням (користуватися не слід)
+     * @deprecated 
+     */
     public Employee() {
         ID = (int)(Math.random()*1000);
 //        if (ID > 10000) {

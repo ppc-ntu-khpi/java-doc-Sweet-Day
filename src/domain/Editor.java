@@ -1,6 +1,18 @@
 package domain;
+/**
+ * Клас, який описує редактора
+ * @author Віка Думініке
+ */
 public class Editor extends Artist {
-
+    /** 
+     * Конструктор класа Editor  
+     * @param electronicEditing Чи працює редактор з паперовими документами
+     * @param skiils Навички
+     * @param name Прізвище та ім'я
+     * @param jobTitle Посада
+     * @param level Розряд чи категорія
+     * @param dept Відділ, де працює співробітник
+     */
     public Editor(boolean electronicEditing, String[] skiils, String name, String jobTitle, int level, String dept) {
         super(skiils, name, jobTitle, level, dept);
         this.electronicEditing = electronicEditing;
@@ -32,6 +44,9 @@ public class Editor extends Artist {
             
     }
 
+    /**
+     * True, якщо редактор надає перевагу паперам
+     */
     private boolean electronicEditing;
 
     public boolean getPreferences() {
